@@ -1,0 +1,1930 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/tailwind.min.css" />
+    <link rel="stylesheet" href="/css/toastr.min.css" />
+    <link rel="stylesheet" href="/css/autocomplete.min.css" />
+</head>
+
+<body style="overflow-x: hidden;">
+    <div>
+        <div id="mobile-sidebar-main" class="fixed inset-0 flex z-40 md:hidden hidden" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 bg-gray-600 bg-opacity-75" aria-hidden="true"></div>
+            <div class="relative flex-1 flex flex-col max-w-xs w-full bg-white">
+                <div class="absolute top-0 right-0 -mr-12 pt-2">
+                    <button id="mobile-close-sidebar" type="button"
+                        class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <span class="sr-only">Close sidebar</span>
+                        <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+                    <div class="flex-shrink-0 flex items-center px-4">
+                        <img class="h-8 w-auto rounded-full" src="img/logo.png" alt="Logo">
+                    </div>
+                    <nav id="mobile-sidebar" class="mt-5 flex-1 px-2 bg-white space-y-1">
+                        <a id="mobile-sidebar-home"
+                            class="bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg class="text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                            Home
+                        </a>
+
+                        <a href="/students" id="mobile-sidebar-students"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                            </svg>
+                            Students
+                        </a>
+
+                        <a href="/parents" id="mobile-sidebar-parents"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <!-- Heroicon name: outline/calendar -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+
+                            Parents
+                        </a>
+
+                        <a href="/payments" id="mobile-sidebar-payments"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            Payments
+                        </a>
+
+                        <a href="/vouchers" id="mobile-sidebar-vouchers"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <!-- Heroicon name: outline/folder -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m9 14.25 6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0c1.1.128 1.907 1.077 1.907 2.185ZM9.75 9h.008v.008H9.75V9Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm4.125 4.5h.008v.008h-.008V13.5Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                            </svg>
+
+                            Vouchers
+                        </a>
+
+                        <a href="/balance" id="mobile-sidebar-balance"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                            </svg>
+
+                            Balance
+                        </a>
+
+                        <a href="/print" id="mobile-sidebar-print"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" />
+                            </svg>
+
+                            Print Reports
+                        </a>
+
+                        <a href="/payables" id="mobile-sidebar-payables"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                            </svg>
+
+                            Payables
+                        </a>
+
+                        <a href="/departments" id="mobile-sidebar-allocations"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <!-- Heroicon name: outline/chart-bar -->
+                            <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                            Allocations
+                        </a>
+
+                        <a href="/users" id="mobile-sidebar-users"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                            </svg>
+
+                            Users
+                        </a>
+                    </nav>
+                </div>
+                <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
+                    <a href="#" class="flex-shrink-0 group block">
+                        <div class="flex items-center">
+                            <div>
+                                <img class="inline-block h-10 w-10 rounded-full" src="img/user.png" alt="">
+                            </div>
+                            <div class="ml-3">
+                                <p id="mobile-username"
+                                    class="text-base font-medium text-gray-700 group-hover:text-gray-900">...</p>
+                                <p id="mobile-role" class="text-sm font-medium text-gray-500 group-hover:text-gray-700">
+                                    ...</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex-shrink-0 w-14">
+                <!-- Force sidebar to shrink to fit close icon -->
+            </div>
+        </div>
+        <!-- Static sidebar for desktop -->
+        <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
+            <div class="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white">
+                <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+                    <div class="flex items-center flex-shrink-0 px-4">
+                        <img class="h-8 w-auto rounded-full" src="/img/logo.png" alt="Logo">
+                    </div>
+                    <nav id="sidebar" class="mt-5 flex-1 px-2 bg-white space-y-1">
+                        <a id="sidebar-home"
+                            class="bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg class="text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                            Home
+                        </a>
+
+                        <a href="/students" id="sidebar-students"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                            </svg>
+                            Students
+                        </a>
+
+                        <a href="/parents" id="sidebar-parents"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <!-- Heroicon name: outline/calendar -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+
+                            Parents
+                        </a>
+
+                        <a href="/payments" id="sidebar-payments"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            Payments
+                        </a>
+
+                        <a href="/vouchers" id="sidebar-vouchers"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <!-- Heroicon name: outline/folder -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m9 14.25 6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0c1.1.128 1.907 1.077 1.907 2.185ZM9.75 9h.008v.008H9.75V9Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm4.125 4.5h.008v.008h-.008V13.5Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                            </svg>
+
+                            Vouchers
+                        </a>
+
+                        <a href="/balance" id="sidebar-balance"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                            </svg>
+
+                            Balance
+                        </a>
+
+                        <a href="/print" id="sidebar-print"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" />
+                            </svg>
+                            </svg>
+
+                            Print Reports
+                        </a>
+
+                        <a href="/payables" id="sidebar-payables"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                            </svg>
+
+                            Payables
+                        </a>
+
+                        <a href="/departments" id="sidebar-allocations"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <!-- Heroicon name: outline/chart-bar -->
+                            <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                            Allocations
+                        </a>
+
+                        <a href="/users" id="sidebar-users"
+                            class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor"
+                                class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                            </svg>
+
+                            Users
+                        </a>
+                    </nav>
+                </div>
+                <div class="flex-shrink-0 flex border-t border-gray-200 p-4">
+                    <a href="#" class="flex-shrink-0 w-full group block">
+                        <div class="flex items-center">
+                            <div>
+                                <img class="inline-block h-9 w-9 rounded-full" src="/img/user.png" alt="">
+                            </div>
+                            <div class="ml-3">
+                                <p id="main-username"
+                                    class="text-sm font-medium text-gray-700 group-hover:text-gray-900">...</p>
+                                <p id="main-role" class="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                                    ...</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="main" class="md:pl-64 flex flex-col flex-1">
+            <!-- Mobile Open Sidebar -->
+            <div class="sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-blue-600">
+                <button id="mobile-open-sidebar" type="button"
+                    class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <span class="sr-only">Open sidebar</span>
+                    <svg style="color: white;" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- the cool stuff -->
+            <main class="flex-1">
+                <!-- color overlay -->
+                <div id="main-overlay" style="z-index: -9999; position: absolute;"
+                    class="w-full py-6 bg-blue-600 pb-44 md:pb-36"></div>
+                <div class="py-6">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8 mt-3 mb-5 flex justify-between">
+                        <h1 style="font-size: 28px;" id="main-title" class="text-2xl font-bold text-white">Home</h1>
+                        <div class="flex align-right gap-2">
+                            <div id="main-date" class="font-semibold p-2 pl-3 pr-3 text-white bg-blue-700 rounded-lg">
+                                07/21/2024
+                            </div>
+                            <div id="main-name" class="font-semibold p-2 pl-3 pr-3 text-white bg-blue-700 rounded-xl">
+                                TCNHS - SPTA
+                                <div id="main-name-dropdown"
+                                    class="hidden absolute mt-3 bg-blue-800 p-2 rounded-lg mr-2">
+                                    <a href="/api/logout"> Logout </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page Home -->
+                    <div id="pages-home" class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8">
+                        <div id="home-overview">
+                            <h3 class="text-lg leading-6 font-medium text-white">Overview</h3>
+                            <dl
+                                class="mt-5 grid rounded-lg bg-white overflow-hidden shadow divide-y divide-gray-200 grid-cols-1 md:grid-cols-3 md:divide-y-0 md:divide-x">
+                                <div class="px-4 py-5 sm:p-6">
+                                    <dt class="text-base font-normal text-gray-900">General Balance</dt>
+                                    <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
+                                        <div id="home-genbalance"
+                                            class="flex items-baseline text-2xl font-semibold text-blue-600">₱...</div>
+                                    </dd>
+                                </div>
+                                <!-- Desktop only -->
+                                <div class="px-4 py-5 sm:p-6 hidden md:block">
+                                    <dt class="text-base font-normal text-gray-900">Total Students</dt>
+                                    <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
+                                        <div id="home-students"
+                                            class="flex items-baseline text-2xl font-semibold text-blue-600">...</div>
+                                    </dd>
+                                </div>
+                                <div class="px-4 py-5 sm:p-6 hidden md:block">
+                                    <dt class="text-base font-normal text-gray-900">Total Payments</dt>
+                                    <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
+                                        <div id="home-payments"
+                                            class="flex items-baseline text-2xl font-semibold text-blue-600">...</div>
+                                    </dd>
+                                </div>
+                            </dl>
+                            <!-- mobile data -->
+                            <dl
+                                class="mt-5 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow  divide-gray-200 grid-cols-2 divide-x block md:hidden">
+                                <div class="px-4 py-5 sm:p-6">
+                                    <dt class="text-base font-normal text-gray-900">Total Students</dt>
+                                    <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
+                                        <div id="home-students-mobile"
+                                            class="flex items-baseline text-2xl font-semibold text-blue-600">...</div>
+                                    </dd>
+                                </div>
+
+                                <div class="px-4 py-5 sm:p-6">
+                                    <dt class="text-base font-normal text-gray-900">Total Payments</dt>
+                                    <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
+                                        <div id="home-payments-mobile"
+                                            class="flex items-baseline text-2xl font-semibold text-blue-600">...</div>
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                        <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+                            <div class="flex flex-col">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900 mb-5">Transactions Chart
+                                </h3>
+                                <div id="home-chart" class="bg-white shadow rounded-lg p-4">
+                                    <div class="flex space-x-4 mb-4">
+                                        <button id="btn-day" onclick="window.app.updateChart('day')"
+                                            class="rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-800">Day</button>
+                                        <button id="btn-week" onclick="window.app.updateChart('week')"
+                                            class="rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-800">Week</button>
+                                        <button id="btn-month" onclick="window.app.updateChart('month')"
+                                            class="rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-800">Month</button>
+                                    </div>
+                                    <canvas id="home-transactions" width="760" height="287"></canvas>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900 mb-5">Latest Transactions</h3>
+                                <div id="latest-transactions"
+                                    class="bg-white shadow rounded-lg p-4 h-128 overflow-y-auto">
+                                    <div id="transaction-list" class="flex flex-col space-y-2">
+                                        <!-- Latest transactions will be populated here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page Students -->
+                    <div id="pages-students" class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8" style="display: none;">
+                        <div id="students-main" class="flex flex-col">
+                            <!-- Search Bar with Filter -->
+                            <div class="flex items-center py-2 space-x-2">
+                                <select id="students-filter-by"
+                                    class="block rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    <option value="1">Name</option>
+                                    <option value="2">LRN</option>
+                                    <option value="3">Parent</option>
+                                    <option value="4">Grade</option>
+                                    <option value="5">Section</option>
+                                    <option value="6">Scholarship</option>
+                                    <option value="7">School Year</option>
+                                    <option value="8">Payment Status</option>
+                                </select>
+                                <input type="text" id="search-students" placeholder="Search students"
+                                    class="flex-1 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                            <!-- flexbox grid of 3 buttons -->
+                            <div class="flex grid-cols-3 justify-center items-center gap-5 w-full mb-5">
+                                <button id="students-add-btn" type="button"
+                                    class="w-full mt-5 flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="w-6 h-6 inline-block align-middle mr-1">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    Add Student</button>
+                                <input type="file" id="students-import" class="hidden">
+                                <label id="students-import-btn" for="students-import"
+                                    class="w-full importbtn mt-5 flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="w-6 h-6 inline-block align-middle mr-1">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    Import Students</label>
+                                <button id="students-export" type="button"
+                                    class="w-full mt-5 flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="w-6 h-6 inline-block align-middle mr-1">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    Export Students</button>
+                            </div>
+                            <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                                        <table id="students-list" class="min-w-full divide-y divide-gray-200">
+                                            <thead id="students-list-head" class="bg-gray-50">
+                                                <tr>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Name</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        LRN</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Parent</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Grade</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Section</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Scholarship</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        School Year</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Payment Status</th>
+                                                    <th scope="col" class="relative px-6 py-3">
+                                                        <span class="sr-only">Edit</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Overlay -->
+                        <div id="students-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"></div>
+                        <div id="students-add" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <div class="mx-auto max-w-2xl text-center">
+                                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-2">Add
+                                        Student</h2>
+                                </div>
+                                <div class="mx-auto mt-8 max-w-xl sm:mt-8">
+                                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                        <div>
+                                            <label for="first-name"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>First name</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="students-add-first-name"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="last-name"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Last
+                                                name</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="students-add-last-name"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="company"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>LRN</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="students-add-LRN"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Parent
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="students-add-parentID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Grade</label>
+                                            <div class="mt-2.5">
+                                                <input id="students-add-gradeID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Section
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="students-add-sectionID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900">Scholarship
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="students-add-scholarshipID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>School Year
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="students-add-schoolyrID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-8">
+                                        <button id="students-add-btn-final" type="submit"
+                                            class="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Add
+                                            Student</button>
+                                    </div>
+                                    <div class="mt-5">
+                                        <button id="students-cancel"
+                                            class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="students-edit" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <div class="mx-auto max-w-2xl text-center">
+                                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-2">Edit
+                                        Student</h2>
+                                </div>
+                                <div class="mx-auto mt-8 max-w-xl sm:mt-8">
+                                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                        <div>
+                                            <label for="first-name"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>First
+                                                name</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="students-edit-first-name"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="last-name"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Last
+                                                name</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="students-edit-last-name"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="company"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>LRN</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="students-edit-LRN"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Parent
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="students-edit-parentID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Grade</label>
+                                            <div class="mt-2.5">
+                                                <input id="students-edit-gradeID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Section
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="students-edit-sectionID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900">Scholarship
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="students-edit-scholarshipID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>School Year
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="students-edit-schoolyrID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-8">
+                                        <button id="students-edit-btn-final" type="submit"
+                                            class="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Edit
+                                            Student</button>
+                                    </div>
+                                    <div class="mt-5">
+                                        <button id="students-cancel"
+                                            class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page Vouchers -->
+                    <div id="pages-vouchers" class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8" style="display: none;">
+                        <div id="vouchers-main" class="flex flex-col">
+                            <!-- Search Bar with Filter -->
+                            <div class="flex items-center py-2 space-x-2">
+                                <select id="vouchers-filter-by"
+                                    class="block rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    <option value="2">Name</option>
+                                    <option value="3">Requester</option>
+                                    <option value="4">Amount</option>
+                                    <option value="5">Voucher No</option>
+                                    <option value="6">Allocation</option>
+                                    <option value="7">Notes</option>
+                                </select>
+                                <input type="text" id="search-vouchers" placeholder="Search vouchers"
+                                    class="flex-1 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                            <br>
+                            <button id="vouchers-add-btn" type="button"
+                            class="flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor"
+                            class="w-6 h-6 inline-block align-middle mr-1">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                            Add
+                            Voucher</button>
+                            <br>
+                            <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                                        <table id="vouchers-list" class="min-w-full divide-y divide-gray-200">
+                                            <thead id="vouchers-list-head" class="bg-gray-50">
+                                                <tr>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Timestamp</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Name</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Requester</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Amount</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Voucher No</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Notes</th>
+                                                    <th scope="col" class="relative px-6 py-3"><span
+                                                            class="sr-only">Edit</span></th>
+                                                    <th scope="col" class="relative px-6 py-3"><span
+                                                            class="sr-only">Print</span></th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Overlay -->
+                        <div id="vouchers-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"></div>
+
+                        <div id="vouchers-add" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <div class="mx-auto max-w-2xl text-center">
+                                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-2">Add
+                                        Voucher</h2>
+                                </div>
+                                <div class="mx-auto mt-8 max-w-xl sm:mt-8">
+                                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                        <div class="sm:col-span-2 hidden">
+                                            <label for="timestamp"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Timestamp</label>
+                                            <div class="mt-2.5">
+                                                <input type="datetime-local" id="vouchers-add-timestamp"
+                                                    name="timestamp"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="vouchers-add-name"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Name</label>
+                                            <select id="vouchers-add-name"
+                                                class="mt-2 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></select>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="requestor"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Requester</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="vouchers-add-requestor" name="requestor"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="amount"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Amount</label>
+                                            <div class="mt-2.5">
+                                                <input type="number" id="vouchers-add-amount" name="amount"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="voucherno"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Voucher
+                                                No</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="vouchers-add-voucherno" name="voucherno"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="hidden">
+                                            <label for="allocationID"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Allocation
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="vouchers-add-allocationID" name="allocationID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="notes"
+                                                class="block text-sm font-semibold leading-6 text-gray-900">Notes</label>
+                                            <div class="mt-2.5">
+                                                <textarea id="vouchers-add-notes" name="notes" rows="4"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-10">
+                                        <button id="vouchers-add-btn-final" type="button"
+                                            class="block w-full rounded-md bg-blue-600 px-3 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Add</button>
+                                    </div>
+                                    <div class="mt-6">
+                                        <button id="vouchers-cancel" type="button"
+                                            class="block w-full rounded-md bg-red-600 px-3 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="vouchers-edit" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <div class="mx-auto max-w-2xl text-center">
+                                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-2">Edit
+                                        Voucher</h2>
+                                </div>
+                                <div class="mx-auto mt-8 max-w-xl sm:mt-8">
+                                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                        <div class="sm:col-span-2 hidden">
+                                            <label for="timestamp"
+                                                class="block text-sm font-semibold leading-6 text-gray-900">Timestamp</label>
+                                            <div class="mt-2.5">
+                                                <input type="datetime-local" id="vouchers-edit-timestamp"
+                                                    name="timestamp"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="vouchers-edit-name"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Name</label>
+                                            <select id="vouchers-edit-name"
+                                                class="mt-2 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></select>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="requestor"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Requester</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="vouchers-edit-requestor" name="requestor"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="amount"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Amount</label>
+                                            <div class="mt-2.5">
+                                                <input type="number" id="vouchers-edit-amount" name="amount"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="voucherno"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Voucher
+                                                No</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="vouchers-edit-voucherno" name="voucherno"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="hidden">
+                                            <label for="allocationID"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Allocation
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="vouchers-edit-allocationID" name="allocationID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="notes"
+                                                class="block text-sm font-semibold leading-6 text-gray-900">Notes</label>
+                                            <div class="mt-2.5">
+                                                <textarea id="vouchers-edit-notes" name="notes" rows="4"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-10">
+                                        <button id="vouchers-edit-btn-final" type="button"
+                                            class="block w-full rounded-md bg-blue-600 px-3 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Edit</button>
+                                    </div>
+                                    <div class="mt-6">
+                                        <button id="vouchers-cancel" type="button"
+                                            class="block w-full rounded-md bg-red-600 px-3 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page Parents -->
+                    <div id="pages-parents" class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8" style="display: none;">
+                        <div id="parents-main" class="flex flex-col">
+                            <!-- Search Bar with Filter -->
+                            <div class="flex items-center py-2 space-x-2">
+                                <select id="parents-filter-by"
+                                    class="block rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    <option value="1">Name</option>
+                                    <option value="2">Address</option>
+                                    <option value="3">Relationship</option>
+                                    <option value="4">Contact</option>
+                                    <option value="5">Payment Status</option>
+                                </select>
+                                <input type="text" id="search-parents" placeholder="Search parents"
+                                    class="flex-1 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                            <!-- flexbox grid of 3 buttons -->
+                            <div class="flex grid-cols-3 justify-center items-center gap-5 w-full mb-5">
+                                <button id="parents-add-btn" type="button"
+                                    class="w-full mt-5 flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="w-6 h-6 inline-block align-middle mr-1">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    Add Parent</button>
+                                <input type="file" id="parents-import" class="hidden">
+                                <label id="parents-import-btn" for="parents-import"
+                                    class="w-full importbtn mt-5 flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="w-6 h-6 inline-block align-middle mr-1">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    Import Parents</label>
+                                <button id="parents-export" type="button"
+                                    class="w-full mt-5 flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="w-6 h-6 inline-block align-middle mr-1">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    Export Parents</button>
+                            </div>
+                            <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                                        <table id="parents-list" class="min-w-full divide-y divide-gray-200">
+                                            <thead id="parents-list-head" class="bg-gray-50">
+                                                <tr>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Name</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Address</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Relationship</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Contact</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Payment Status</th>
+                                                    <th scope="col" class="relative px-6 py-3">
+                                                        <span class="sr-only">Edit</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Overlay -->
+                        <div id="parents-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"></div>
+                        <div id="parents-add" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <div class="mx-auto max-w-2xl text-center">
+                                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-2">Add
+                                        Parent
+                                    </h2>
+                                </div>
+                                <div class="mx-auto mt-8 max-w-xl sm:mt-8">
+                                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                        <div>
+                                            <label for="first-name"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>First
+                                                name</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="parents-add-first-name"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="last-name"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Last
+                                                name</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="parents-add-last-name"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="company"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Address</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="parents-add-address"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Relationship</label>
+                                            <div class="mt-2.5">
+                                                <input type="email" name="email" id="parents-add-relationship"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Contact</label>
+                                            <div class="mt-2.5">
+                                                <input type="email" name="email" id="parents-add-contact"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="message"
+                                                class="block text-sm font-semibold leading-6 text-gray-900">Notes</label>
+                                            <div class="mt-2.5">
+                                                <textarea name="message" id="parents-add-notes" rows="4"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-8">
+                                        <button id="parents-add-btn-final" type="submit"
+                                            class="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Add
+                                            Parent</button>
+                                    </div>
+                                    <div class="mt-5">
+                                        <button id="parents-cancel"
+                                            class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="parents-edit" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <div class="mx-auto max-w-2xl text-center">
+                                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-2">Edit
+                                        Parent</h2>
+                                </div>
+                                <div class="mx-auto mt-8 max-w-xl sm:mt-8">
+                                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                        <div>
+                                            <label for="first-name"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>First
+                                                name</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="parents-edit-first-name"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="last-name"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Last
+                                                name</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="parents-edit-last-name"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="company"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Address</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="parents-edit-address"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Relationship</label>
+                                            <div class="mt-2.5">
+                                                <input type="email" name="email" id="parents-edit-relationship"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="email"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Contact</label>
+                                            <div class="mt-2.5">
+                                                <input type="email" name="email" id="parents-edit-contact"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="message"
+                                                class="block text-sm font-semibold leading-6 text-gray-900">Notes</label>
+                                            <div class="mt-2.5">
+                                                <textarea name="message" id="parents-edit-notes" rows="4"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-8">
+                                        <button id="parents-edit-btn-final" type="submit"
+                                            class="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Edit
+                                            Parent</button>
+                                    </div>
+                                </div>
+                                <div class="mt-5">
+                                    <button id="parents-cancel"
+                                        class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page Payments -->
+                    <div id="pages-payments" class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8" style="display: none;">
+                        <div id="payments-main" class="flex flex-col">
+                            <!-- Search Bar with Filter -->
+                            <div class="flex items-center py-2 space-x-2">
+                                <select id="payments-filter-by"
+                                    class="block rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    <option value="1">Time</option>
+                                    <option value="2">Official Rece</option>
+                                    <option value="3">Amount</option>
+                                    <option value="4">Parent</option>
+                                    <option value="5">Grade Level</option>
+                                </select>
+                                <input type="text" id="search-payments" placeholder="Search payments"
+                                    class="flex-1 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                            <br>
+                            <button id="payments-add-btn" type="button"
+                                class="flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="w-6 h-6 inline-block align-middle mr-1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                                Add
+                                Payment</button>
+                            <br>
+                            <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                                        <table id="payments-list" class="min-w-full divide-y divide-gray-200">
+                                            <thead id="payments-list-head" class="bg-gray-50">
+                                                <tr>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Timestamp</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Official Rece</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Amount</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Parent</th>
+                                                    <th scope="col" class="relative px-6 py-3"><span
+                                                            class="sr-only">Edit</span></th>
+                                                    <th scope="col" class="relative px-6 py-3"><span
+                                                            class="sr-only">Print</span></th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Overlay -->
+                        <div id="payments-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"></div>
+                        <div id="payments-add" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <div class="mx-auto max-w-2xl text-center">
+                                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Add
+                                        Payment</h2>
+                                </div>
+                                <div class="mx-auto mt-8 max-w-xl sm:mt-8">
+                                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                        <div class="sm:col-span-2 hidden">
+                                            <label for="timestamp"
+                                                class="block text-sm font-semibold leading-6 text-gray-900">Timestamp</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="payments-add-timestamp"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="timestamp"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Year</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="payments-add-year"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2 hidden">
+                                            <label for="timestamp"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Payable</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="payments-add-payable"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="parentID"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Parent
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="payments-add-parentID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                            <b id="payments-add-parentID-pre" class="hidden">Parent 1</b>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="studentID"
+                                                class="block text-sm font-semibold leading-6 text-gray-900">Student
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="payments-add-studentID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                            <b id="payments-add-studentID-pre" class="hidden">Student 1</b>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label id="payments-add-amount-label" for="amount"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Amount</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="payments-add-amount"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="timestamp"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Official Rece</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="payments-add-or_no"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <!-- checkbox -->
+                                        <div class="relative flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input id="payments-add-autofill" type="checkbox"
+                                                    class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                            </div>
+                                            <div class="ml-3 text-sm">
+                                                <label for="comments" class="font-medium text-gray-700">Autofill Order
+                                                    Number</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-10">
+                                        <button id="payments-add-btn-final"
+                                            class="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Add
+                                            Payment</button>
+                                    </div>
+                                    <div class="mt-5">
+                                        <button id="payments-cancel"
+                                            class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="payments-edit" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <div class="mx-auto max-w-2xl text-center">
+                                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Edit Payment
+                                    </h2>
+                                </div>
+                                <div class="mx-auto mt-8 max-w-xl sm:mt-8">
+                                    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                        <div class="sm:col-span-2 hidden">
+                                            <label for="timestamp"
+                                                class="block text-sm font-semibold leading-6 text-gray-900">Timestamp</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="payments-edit-timestamp"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="timestamp"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Official Rece</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="payments-edit-or_no"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label id="payments-edit-amount-label" for="amount"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Amount</label>
+                                            <div class="mt-2.5">
+                                                <input type="text" id="payments-edit-amount"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2">
+                                            <label for="parentID"
+                                                class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                    class="text-red-400">* </b>Parent
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="payments-edit-parentID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                        <div class="sm:col-span-2 hidden">
+                                            <label for="studentID"
+                                                class="block text-sm font-semibold leading-6 text-gray-900">Student
+                                            </label>
+                                            <div class="mt-2.5">
+                                                <input id="payments-edit-studentID"
+                                                    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-10">
+                                        <button id="payments-edit-btn-final"
+                                            class="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Edit
+                                            Payment</button>
+                                    </div>
+                                    <div class="mt-5">
+                                        <button id="payments-cancel"
+                                            class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page Departments -->
+                    <div id="pages-allocations" class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8" style="display: none;">
+                        <div id="departments-main" class="flex flex-col">
+                            <!-- Search Bar with Filter -->
+                            <div class="flex items-center py-2 space-x-2">
+                                <select id="departments-filter-by"
+                                    class="block rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    <option value="1">Payable</option>
+                                    <option value="2">Name</option>
+                                    <option value="3">Percentage</option>
+                                    <option value="4">Notes</option>
+                                </select>
+                                <input type="text" id="search-departments" placeholder="Search allocations"
+                                    class="flex-1 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                            <br>
+                            <button id="departments-add-btn" type="button"
+                                class="flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="w-6 h-6 inline-block align-middle mr-1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                                Add
+                                Allocation</button>
+                            <br>
+                            <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                                        <table id="departments-list" class="min-w-full divide-y divide-gray-200">
+                                            <thead id="departments-list-head" class="bg-gray-50">
+                                                <tr>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Payable</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Name</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Percentage</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Notes</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Balance</th>
+                                                    <th scope="col" class="relative px-6 py-3">
+                                                        <span class="sr-only">Edit</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Overlay -->
+                        <div id="departments-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"></div>
+
+                        <!-- Add Department Popup -->
+                        <div id="departments-add" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Add
+                                    Allocation</h2>
+                                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mt-8">
+                                    <div class="sm:col-span-2">
+                                        <label for="payableID"
+                                            class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Payable
+                                        </label>
+                                        <input type="text" id="departments-add-payableID"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                    <div class="sm:col-span-2">
+                                        <label for="name" class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Name</label>
+                                        <input type="text" id="departments-add-name"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                    <div class="sm:col-span-2">
+                                        <label for="percentage"
+                                            class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Percentage</label>
+                                        <input type="text" id="departments-add-percentage"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                    <div class="sm:col-span-2">
+                                        <label for="notes"
+                                            class="block text-sm font-semibold leading-6 text-gray-900">Notes</label>
+                                        <textarea id="departments-add-notes" rows="4"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                                    </div>
+                                </div>
+                                <div class="mt-10">
+                                    <button id="departments-add-btn-final" type="button"
+                                        class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+                                </div>
+                                <div class="mt-4">
+                                    <button id="departments-cancel" type="button"
+                                        class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Edit Department Popup -->
+                        <div id="departments-edit" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Edit
+                                    Allocation</h2>
+                                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mt-8">
+                                    <div class="sm:col-span-2">
+                                        <label for="payableID"
+                                            class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Payable
+                                        </label>
+                                        <input type="text" id="departments-edit-payableID"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                    <div>
+                                        <label for="name" class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Name</label>
+                                        <input type="text" id="departments-edit-name"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                    <div class="sm:col-span-2">
+                                        <label for="percentage"
+                                            class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Percentage</label>
+                                        <input type="text" id="departments-edit-percentage"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                    <div class="sm:col-span-2">
+                                        <label for="notes"
+                                            class="block text-sm font-semibold leading-6 text-gray-900">Notes</label>
+                                        <textarea id="departments-edit-notes" rows="4"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                                    </div>
+                                </div>
+                                <div class="mt-10">
+                                    <button id="departments-edit-btn-final" type="button"
+                                        class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+                                </div>
+                                <div class="mt-4">
+                                    <button id="departments-cancel-edit" type="button"
+                                        class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page Balance -->
+                    <div id="pages-balance" class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8" style="display: none;">
+                        <div id="home-overview">
+                            <h3 class="text-lg leading-6 font-medium text-white">Overview</h3>
+                            <dl
+                                class="mt-5 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-3 md:divide-y-0 md:divide-x">
+                                <div class="px-4 py-5 sm:p-6">
+                                    <dt class="text-base font-normal text-gray-900">General Balance</dt>
+                                    <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
+                                        <div id="balance-genbalance"
+                                            class="flex items-baseline text-2xl font-semibold text-blue-600">
+                                            ...
+                                        </div>
+                                    </dd>
+                                </div>
+
+                                <div class="px-4 py-5 sm:p-6">
+                                    <dt class="text-base font-normal text-gray-900">Total Payments</dt>
+                                    <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
+                                        <div id="balance-revenue"
+                                            class="flex items-baseline text-2xl font-semibold text-blue-600">
+                                            ...
+                                        </div>
+                                    </dd>
+                                </div>
+
+                                <div class="px-4 py-5 sm:p-6">
+                                    <dt class="text-base font-normal text-gray-900">Total Vouchers</dt>
+                                    <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
+                                        <div id="balance-paid"
+                                            class="flex items-baseline text-2xl font-semibold text-blue-600">
+                                            ...
+                                        </div>
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="mt-8 grid grid-cols-1 gap-4 grid-cols-1 md:grid-cols-2">
+                            <div class="flex flex-col">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900 mb-5">Transactions
+                                </h3>
+                                <div id="latest-transactions"
+                                    class="bg-white shadow rounded-lg p-4 h-128 overflow-y-auto">
+                                    <div id="balance-transaction-list" class="flex flex-col space-y-2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900 mb-5">Vouchers</h3>
+                                <div id="latest-transactions"
+                                    class="bg-white shadow rounded-lg p-4 h-128 overflow-y-auto">
+                                    <div id="balance-vouchers-list" class="flex flex-col space-y-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page Print -->
+                    <div id="pages-print" class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8" style="display: none;">
+                        <label style="margin-bottom: -15px;"
+                            class="block text-sm font-medium leading-6 text-gray-900">Select Report Type</label>
+                        <br>
+                        <div class="flex items-center py-2">
+                            <select id="print-report-type"
+                                class="w-full block rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <option value="students">Students</option>
+                                <option value="vouchers">Vouchers</option>
+                                <option value="balance">Balance</option>
+                            </select>
+                        </div>
+                        <br>
+
+                        <div id="print-students-options">
+                            <label class="block text-sm font-medium leading-6 text-gray-900"><b class="text-red-400">*
+                                </b>School Year</label>
+                            <div class="flex items-center py-2">
+                                <select id="print-year"
+                                    class="w-full block rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    <option value="">...</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="sm:col-span-3">
+                                <label for="print-grade" class="block text-sm font-medium leading-6 text-gray-900">Grade
+                                    Level</label>
+                                <div class="mt-2">
+                                    <input type="text" id="print-grade"
+                                        class="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="sm:col-span-3">
+                                <label for="print-section"
+                                    class="block text-sm font-medium leading-6 text-gray-900">Section</label>
+                                <div class="mt-2">
+                                    <input type="text" id="print-section"
+                                        class="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="print-vouchers-options" style="display: none;">
+                            <label class="block text-sm font-medium leading-6 text-gray-900"><b class="text-red-400">*
+                                </b>From Date</label>
+                            <div class="mt-2">
+                                <input type="date" id="print-vouchers-from-date"
+                                    class="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                            <br>
+                            <label class="block text-sm font-medium leading-6 text-gray-900"><b class="text-red-400">*
+                                </b>To Date</label>
+                            <div class="mt-2">
+                                <input type="date" id="print-vouchers-to-date"
+                                    class="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <div id="print-balance-options" style="display: none;">
+                            <label class="block text-sm font-medium leading-6 text-gray-900"><b class="text-red-400">*
+                                </b>From Date</label>
+                            <div class="mt-2">
+                                <input type="date" id="print-balance-from-date"
+                                    class="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                            <br>
+                            <label class="block text-sm font-medium leading-6 text-gray-900"><b class="text-red-400">*
+                                </b>To Date</label>
+                            <div class="mt-2">
+                                <input type="date" id="print-balance-to-date"
+                                    class="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+
+                        <br>
+                        <button id="print-print" type="button"
+                            class="flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Print</button>
+                    </div>
+                    <!-- Users -->
+                    <div id="pages-users" class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8" style="display: none;">
+                        <div id="users-main" class="flex flex-col">
+                            <!-- Search Bar with Filter -->
+                            <div class="flex items-center py-2 space-x-2">
+                                <select id="users-filter-by"
+                                    class="block rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    <option value="1">User ID</option>
+                                    <option value="2">Name</option>
+                                    <option value="3">Role</option>
+                                </select>
+                                <input type="text" id="search-users" placeholder="Search users"
+                                    class="flex-1 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                            <br>
+                            <button id="users-add-btn" type="button"
+                                class="flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="w-6 h-6 inline-block align-middle mr-1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                                Add
+                                User</button>
+                            <br>
+                            <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                                        <table id="users-list" class="min-w-full divide-y divide-gray-200">
+                                            <thead id="users-list-head" class="bg-gray-50">
+                                                <tr>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        User ID</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Name</th>
+                                                    <th scope="col"
+                                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Role</th>
+                                                    <th scope="col" class="relative px-6 py-3">
+                                                        <span class="sr-only">Edit</span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Overlay -->
+                        <div id="users-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"></div>
+
+                        <!-- Add User Popup -->
+                        <div id="users-add" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Add
+                                    User</h2>
+                                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mt-8">
+                                    <div>
+                                        <label for="name" class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Name</label>
+                                        <input type="text" id="users-add-name"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                    <div>
+                                        <label for="password"
+                                            class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Password</label>
+                                        <input type="password" id="users-add-password"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                    <div class="sm:col-span-2">
+                                        <label for="role" class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Role</label>
+                                        <input type="text" id="users-add-role"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+                                <div class="mt-10">
+                                    <button id="users-add-btn-final" type="button"
+                                        class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+                                </div>
+                                <div class="mt-4">
+                                    <button id="users-cancel" type="button"
+                                        class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Edit User Popup -->
+                        <div id="users-edit" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+                            <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
+                                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center">Edit
+                                    User</h2>
+                                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 mt-8">
+                                    <div>
+                                        <label for="name" class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Name</label>
+                                        <input type="text" id="users-edit-name"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                    <div>
+                                        <label for="password"
+                                            class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Password</label>
+                                        <input type="password" id="users-edit-password"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                    <div class="sm:col-span-2">
+                                        <label for="role" class="block text-sm font-semibold leading-6 text-gray-900"><b
+                                                class="text-red-400">* </b>Role</label>
+                                        <input type="text" id="users-edit-role"
+                                            class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                    </div>
+                                </div>
+                                <div class="mt-10">
+                                    <button id="users-edit-btn-final" type="button"
+                                        class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+                                </div>
+                                <div class="mt-4">
+                                    <button id="users-cancel-edit" type="button"
+                                        class="block w-full rounded-md bg-red-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- payables -->
+                    <div id="pages-payables" class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8" style="display: none;">
+                        <label style="margin-bottom: -15px;"
+                            class="block text-sm font-medium leading-6 text-gray-900">School Year</label>
+                        <br>
+                        <div class="flex items-center py-2">
+                            <select id="payables-year"
+                                class="w-full block rounded-md border-0 px-3.5 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                <option value="">...</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div id="payables-main" class="flex flex-col">
+                            <div class="sm:col-span-3">
+                                <label for="first-name"
+                                    class="block text-sm font-medium leading-6 text-gray-900">Student
+                                    Publication</label>
+                                <div class="mt-2">
+                                    <input type="text" name="first-name" id="payables-student-publication"
+                                        class="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="sm:col-span-3">
+                                <label for="first-name"
+                                    class="block text-sm font-medium leading-6 text-gray-900">Student
+                                    Organization</label>
+                                <div class="mt-2">
+                                    <input type="text" name="first-name" id="payables-student-organization"
+                                        class="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="sm:col-span-3">
+                                <label for="first-name"
+                                    class="block text-sm font-medium leading-6 text-gray-900">Annual/Miscellaneous</label>
+                                <div class="mt-2">
+                                    <input type="text" name="first-name" id="payables-annual-miscellanous"
+                                        class="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="sm:col-span-3">
+                                <label for="first-name"
+                                    class="block text-sm font-medium leading-6 text-gray-900">Janitorial Clerks &
+                                    Trainers</label>
+                                <div class="mt-2">
+                                    <input type="text" name="first-name" id="payables-janitorial-clerks-trainors"
+                                        class="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="sm:col-span-3">
+                                <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">School
+                                    Development Fund</label>
+                                <div class="mt-2">
+                                    <input type="text" name="first-name" id="payables-school-development-fund"
+                                        class="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
+                            <br>
+                            <button onclick="window.app.updatePayables()" id="payables-save" type="button"
+                                class="flex justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                  </svg>                                  
+                                Update
+                                Payables</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Libs -->
+    <script src="/lib/chart.min.js"></script>
+    <script src="/lib/toastr.min.js"></script>
+    <script src="/lib/autocomplete.min.js"></script>
+    <script src="/lib/jspdf.min.js"></script>
+    <!-- Main -->
+    <script src="/js/util.js"></script>
+    <script src="/js/print.js"></script>
+    <script src="/js/payables.js"></script>
+    <script src="/js/users.js"></script>
+    <script src="/js/students.js"></script>
+    <script src="/js/parents.js"></script>
+    <script src="/js/payments.js"></script>
+    <script src="/js/departments.js"></script>
+    <script src="/js/balance.js"></script>
+    <script src="/js/vouchers.js"></script>
+    <script src="/js/transactions.js"></script>
+    <script src="/js/balance.js"></script>
+    <script src="/js/home.js"></script>
+    <script src="/js/pages.js"></script>
+    <script src="/js/gateway.js"></script>
+</body>
+
+</html>
